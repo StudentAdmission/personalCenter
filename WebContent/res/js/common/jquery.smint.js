@@ -10,12 +10,13 @@ $.fn.smint = function (option) {
             'position': 'fixed',
             'left': stickyLeft,
             'top': 0,
-            'width': option.width,
+            'width': $(self).width(),
             'zIndex': 9999,
             'marginTop': option.marginTop,
             'display': 'none'
         });
     }
+
     var clone = undefined;
     var ua = navigator.userAgent;
     var firefox = "Firefox";
@@ -28,6 +29,7 @@ $.fn.smint = function (option) {
             if (!$(clone).length) {
                 clone = getClone();
             }
+            $(clone).find('.vin-detail').hide();
             $(clone).appendTo($(self).parent());
             if (ua.indexOf(firefox) > -1 && option.logo !== 'show') {
                 $(clone).css('left', stickyLeft - 8.5);
@@ -53,8 +55,10 @@ $.fn.smint = function (option) {
     });
 
     $(window).resize(function () {
-        stickyLeft = $(self).offset().left;
-        $(clone).css('left', stickyLeft);
+        $(clone).css({
+            'left': stickyLeft,
+            'width': $(self).width()
+        });
     })
 
 };
