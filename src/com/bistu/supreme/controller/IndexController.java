@@ -7,10 +7,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class IndexController {
-	@RequestMapping(value="/std-main")
-	public ModelAndView stdMain(){
+	@RequestMapping(value="/index")
+	public ModelAndView index(){
 		ModelAndView mv=new ModelAndView();
-		mv.setViewName("std-main");
+		mv.setViewName("index");
+		return mv;
+	}
+	
+	@RequestMapping(value="/main")
+	public ModelAndView main(){
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("main");
 		return mv;
 	}
 
