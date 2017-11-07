@@ -52,6 +52,11 @@ $.fn.showDetail = function (option) {
         }
     });
 
+    $(window).on('scroll',function () {
+        hide(detail);
+        animateOut(detail);
+    });
+
     /**
      * 初始化显示内容的样式
      */
