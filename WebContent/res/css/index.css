@@ -1,0 +1,257 @@
+@charset "UTF-8";
+/****  公共样式  ***/
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body, div, p, a, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    background-color: #f5f5fa;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    height: 100%;
+}
+
+.sa-container {
+    padding: 0;
+    min-width: 1170px;
+    max-width: 1920px;
+}
+
+.sa-row {
+    margin: 0;
+}
+
+.sa-col {
+    padding: 0;
+}
+
+.divide.slim {
+    height: 1px;
+}
+
+.divide.middle {
+    height: 2px;
+}
+
+.divide.wide {
+    height: 3px;
+}
+
+.red {
+    background-color: red;
+}
+
+.black {
+    background-color: #333;
+}
+
+.cl {
+    clear: both;
+}
+
+/**    index页面样式   **/
+
+.sa-header {
+    background-color: #fff;
+    box-shadow: 3px 4px 15px #333;
+}
+
+.sa-logo {
+    padding-left: 50px;
+    float: left;
+
+}
+
+.personal-info {
+}
+
+.sa-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    float: left;
+    box-shadow: 0 0 5px #333;
+    margin: 15px 0 0;
+    border: 1px solid;
+}
+
+.sa-new-notice:after {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    border-radius: 100%;
+}
+
+.personal-info-dialogue {
+    position: absolute;
+    background-color: white;
+    border: 1px solid;
+    top: 80px;
+    width: 110px;
+    text-align: center;
+    left: -20px;
+    border-radius: 5px;
+    display: none;
+}
+
+.personal-info-dialogue a, .personal-info-dialogue li {
+    padding: 5px 0;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.personal-info-dialogue a:hover, .personal-info-dialogue li:hover {
+    background-color: #559fff;
+    color: white;
+    text-decoration: none;
+}
+
+.personal-info-dialogue li:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+.personal-info-dialogue li:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+.sa-new-notice-inside:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    border-radius: 100%;
+    margin: 8px 0 0 2px;
+}
+
+.sa-nickname {
+    float: left;
+    top: 15px;
+    left: 20px;
+    position: relative;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.sa-aside-menu {
+    background: rgb(67, 67, 67);
+    text-align: center;
+    padding-top: 50px;
+    height: calc(100vh - 90px);
+}
+
+.sa-aside-menu li {
+    cursor: pointer;
+    border-left: 5px solid rgb(67, 67, 67);
+}
+
+.sa-aside-menu li.active, .sa-side-menu li:hover {
+    background-color: rgb(40, 40, 40);
+    border-left-color: rgb(0, 102, 255);
+    box-shadow: inset 10px 10px 40px;
+}
+
+.sa-aside-menu li:hover a {
+    color: #fff;
+}
+
+.sa-aside-menu li.active a {
+    color: #fff;
+}
+
+.sa-aside-menu li a {
+    color: #bcbcbc;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 4em;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.sa-aside-menu li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sa-aside-menu .notice-box {
+    position: relative;
+}
+
+.sa-aside-menu .notice-box a:after {
+    width: 15px;
+    height: 15px;
+    content: '';
+    background-color: red;
+    position: absolute;
+    top: 40%;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+.sa-content {
+    padding: 50px;
+}
+
+.certificate-photo {
+    float: left;
+    padding: 50px;
+    background: white;
+}
+
+.certificate-photo-img {
+    width: 3.5cm;
+    height: 5.3cm;
+}
+
+.sa-student-name {
+    float: left;
+    font-size: 3.5rem;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.personal-information {
+    margin-top: 50px;
+    padding: 50px;
+    background: white;
+}
+
+.detail-row > div[class^='information'] {
+    width: 16.67%;
+    border: 1px solid;
+    float: left;
+    border-collapse: collapse;
+    margin: 0 -1px -1px 0;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 3em;
+}
+
+.personal-information .information-title {
+    background-color: #e4e4e4;
+}
