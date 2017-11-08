@@ -10,7 +10,7 @@ html, body, div, p, a, ul, li {
 }
 
 html, body {
-    height: 100vh;
+    height: auto;
 }
 
 body {
@@ -217,41 +217,11 @@ ul {
     padding: 50px;
 }
 
-.certificate-photo {
-    float: left;
-    padding: 50px;
-    background: white;
-}
-
-.certificate-photo-img {
-    width: 3.5cm;
-    height: 5.3cm;
-}
-
-.sa-student-name {
-    float: left;
-    font-size: 3.5rem;
-    padding: 50px;
-    margin-top: 50px;
-}
-
-.personal-information {
-    margin-top: 50px;
-    padding: 50px;
-    background: white;
-}
-
-.detail-row > div[class^='information'] {
-    width: 16.67%;
-    border: 1px solid;
-    float: left;
-    border-collapse: collapse;
-    margin: 0 -1px -1px 0;
-    font-size: 2.5rem;
-    text-align: center;
-    line-height: 3em;
-}
-
-.personal-information .information-title {
-    background-color: #e4e4e4;
+.go-top {
+    position: fixed;
+    right: 5px;
+    bottom: 10px;
+    color: dodgerblue;
+    display: none;
+    cursor: pointer;
 }
