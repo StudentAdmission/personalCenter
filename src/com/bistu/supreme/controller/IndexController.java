@@ -14,10 +14,10 @@ public class IndexController {
 		return mv;
 	}
 	
-	@RequestMapping(value="/main")
-	public ModelAndView main(){
+	@RequestMapping(value="/information")
+	public ModelAndView information(){
 		ModelAndView mv=new ModelAndView();
-		mv.setViewName("main");
+		mv.setViewName("information");
 		return mv;
 	}
 
