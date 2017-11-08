@@ -4,11 +4,11 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     $routeProvider
     //学生页面路由
         .when('/', {
-            templateUrl: 'index.html',
-            controller: 'indexCtrl'
+            templateUrl: 'information.html',
+            controller: 'informationCtrl'
         })
         //其他情况路由
         .otherwise({
             redirectTo: '/'
-        })
+        });
 }]);
