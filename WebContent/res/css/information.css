@@ -1,0 +1,56 @@
+@charset "UTF-8";
+.certificate-photo {
+    float: left;
+    padding: 50px;
+    background: white;
+}
+
+.certificate-photo-img {
+    width: 3.5cm;
+    height: 5.3cm;
+}
+
+.sa-student-name {
+    float: left;
+    font-size: 3.5rem;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.personal-information {
+    margin-top: 50px;
+    padding: 50px;
+    background: white;
+}
+
+.information-detail div[class^='information'] {
+    border: 1px solid;
+    float: left;
+    border-collapse: collapse;
+    margin: 0 -1px -1px 0;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 3em;
+}
+.information-detail .detail-item{
+    display: inline-block;
+    float: left;
+}
+
+.personal-information .information-title {
+    background-color: #e4e4e4;
+    width: 150px;
+}
+
+.personal-information .information-content{
+    width: 300px;
+}
+
+.personal-information .information-content.family-address {
+    width: 748px;
+}
+@media (max-width: 1315px){
+    .personal-information .information-content.family-address{
+        width: 598px;
+    }
+}
