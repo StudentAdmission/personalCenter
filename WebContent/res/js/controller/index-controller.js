@@ -1,5 +1,5 @@
 app.controller('indexCtrl', ['$http', '$scope', 'validateService', function ($http, $scope, validateService) {
-    var permission = validateService.validateIdentity();
+    var permission = '0'; //validateService.validateIdentity();
     if (permission === -1) {
         alert('请先登录');
         window.location.href = '/studentAdmission';
@@ -12,25 +12,34 @@ app.controller('indexCtrl', ['$http', '$scope', 'validateService', function ($ht
             $scope.identity = 'instructor';
         }
         $(function () {
+            function goTop() {
+                $("html,body").animate({scrollTop: 0}, 500);
+            }
+
             $('#asideMenu').find('ul').find('li').eq(0).addClass('active');
             $('#asideMenu ul>li').each(function () {
-               $(this).click(function () {
-                   $(this).siblings('li').removeClass('active');
-                   $(this).addClass('active');
-               })
+                $(this).on('click', function () {
+                    $(this).siblings('li').removeClass('active');
+                    $(this).addClass('active');
+                });
             });
             $('.sa-new-notice').showDetail();
-            $('#saHeader').smint({
-                'marginTop': 0,
-                'top': 0,
-                'logo': 'show',
-                'width': '100%'
+            var bodyHeight = 0;
+            $(window).on('scroll', function () {
+                if (bodyHeight === 0) {
+                    bodyHeight = $('body').height();
+                    $('#asideMenu').css('height', bodyHeight - 90 + 'px');
+                }
+                var scrollTop = $(this).scrollTop();
+                if (scrollTop > 0) {
+                    $('.go-top').fadeIn();
+                }else{
+                    $('.go-top').fadeOut();
+                }
             });
-            $('#asideMenu').smint({
-                'marginTop': 90,
-                'top': 90,
-                'width': $('#asideMenu').width()
-            })
+            $('.go-top').on('click',function () {
+                goTop();
+            });
         })
     }
 }]);
