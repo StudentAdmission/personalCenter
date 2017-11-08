@@ -17,6 +17,9 @@
 
     <link rel="stylesheet" href="res/css/index.css">
     <link rel="stylesheet" href="res/css/information.css">
+    <link rel="stylesheet" href="res/css/class.css">
+    <link rel="stylesheet" href="res/css/dormitory.css">
+    <link rel="stylesheet" href="res/css/notice-box.css">
 
     <!--favicon-->
     <link rel="icon" href="res/img/favicon.ico">
@@ -44,16 +47,18 @@
     <div class="row sa-row">
         <div id="asideMenu" class="col-sm-2 sa-col sa-aside-menu">
             <ul>
-                <li ng-show="identity=='student'"><a href="javascript:">个人信息</a></li>
-                <li ng-show="identity=='student'"><a href="javascript:">班级信息</a></li>
-                <li ng-show="identity=='student'"><a href="javascript:">宿舍信息</a></li>
-                <li ng-show="identity=='student'" class="notice-box"><a href="javascript:">消息盒子</a></li>
-                <li ng-show="identity!=''"><a href="javascript:">个人设置</a></li>
+                <li ng-show="identity=='student'"><a href="personalInfo">个人信息</a></li>
+                <li ng-show="identity=='student'"><a href="class">班级信息</a></li>
+                <li ng-show="identity=='student'"><a href="dormitory">宿舍信息</a></li>
+                <li ng-show="identity=='student'" class="notice-box"><a href="noticeBox">消息盒子</a></li>
+                <li ng-show="identity!=''"><a href="setting">个人设置</a></li>
                 <li ng-show="identity!=''"><a href="javascript:">返回首页</a></li>
             </ul>
         </div>
         <div class="col-sm-10 sa-col sa-content">
-            <div ng-view=""></div>
+            <div class="sa-content-main">
+                <div ng-view=""></div>
+            </div>
         </div>
     </div>
     <div class="row sa-row">
@@ -78,10 +83,14 @@
 <script src="res/js/app.js"></script>
 <script src="res/js/route.js"></script>
 
+<script src="res/js/service/validate-service.js"></script>
+<script src="res/js/service/personal-information-service.js"></script>
 
 <script src="res/js/controller/index-controller.js"></script>
 <script src="res/js/controller/information-controller.js"></script>
+<script src="res/js/controller/class-controller.js"></script>
+<script src="res/js/controller/dormitory-controller.js"></script>
+<script src="res/js/controller/notice-box-controller.js"></script>
 
-<script src="res/js/service/validate-service.js"></script>
 </body>
 </html>
