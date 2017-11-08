@@ -21,4 +21,22 @@ public class IndexController {
 		return mv;
 	}
 
+	@RequestMapping(value="/class")
+	public ModelAndView classInfo(){
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("class");
+		return mv;
+	}
+	@RequestMapping(value="/dormitory")
+	public ModelAndView dormitory(){
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("dormitory");
+		return mv;
+	}
+	@RequestMapping(value="/notice-box")
+	public ModelAndView noticeBox(){
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("notice-box");
+		return mv;
+	}
 }
