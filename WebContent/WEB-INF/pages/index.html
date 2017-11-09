@@ -36,9 +36,9 @@
                 <img src="res/img/avatar.jpg" class="sa-avatar" alt="">
                 <div class="personal-info-dialogue vin-detail">
                     <ul>
-                        <li><a href="javascript:">个人信息</a></li>
-                        <li><a href="javascript:" class="sa-new-notice-inside">消息盒子</a></li>
-                        <li><a href="javascript:">退出登录</a></li>
+                        <li><a href="personalInfo">个人信息</a></li>
+                        <li><a href="noticeBox" class="sa-new-notice-inside">消息盒子</a></li>
+                        <li ng-click="logout()"><a href="javascript:">退出登录</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                 <li ng-show="identity=='student'"><a href="dormitory">宿舍信息</a></li>
                 <li ng-show="identity=='student'" class="notice-box"><a href="noticeBox">消息盒子</a></li>
                 <li ng-show="identity!=''"><a href="setting">个人设置</a></li>
-                <li ng-show="identity!=''"><a href="javascript:">返回首页</a></li>
+                <li ng-show="identity!=''"><a href="/studentAdmission">返回首页</a></li>
             </ul>
         </div>
         <div class="col-sm-10 sa-col sa-content">
