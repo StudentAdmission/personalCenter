@@ -1,9 +1,16 @@
 app.service('validateService', ['$http', function ($http) {
+    var loginInfo;
     this.setLoginSession = function (session) {
         localStorage.saLogin = session;
     };
     this.setLoginSessionTag = function (tag) {
         localStorage.saTag = tag;
+    };
+    this.setLoginInfo=function (login) {
+        loginInfo=login;
+    };
+    this.getLoginInfo=function () {
+        return loginInfo;
     };
     this.getLoginSessionTag = function () {
         return localStorage.saTag;
