@@ -3,24 +3,42 @@
         <div class="personal-photo">
             <img class="personal-photo-img" src="" alt="">
         </div>
-        <div class="sa-student-name">{{studentInfo.stdName}}</div>
+        <div class="sa-student-name">{{loginInfo.loginNickname}}</div>
     </div>
     <div class="row sa-row">
         <div class="login-info">
             <div class="nickname">
                 <div class="description">昵称</div>
-                <div class="revise"><a href="javascript:">修改</a></div>
-                <div class="content">student</div>
+                <div ng-click="nicknameClicked=!nicknameClicked" class="revise">
+                    <button class="btn btn-primary">{{nicknameClicked?'提交':'修改'}}</button>
+                </div>
+                <div ng-show="!nicknameClicked" class="content">{{loginInfo.loginNickname}}</div>
+                <input class="content" title="" placeholder="输入新昵称" ng-show="nicknameClicked"
+                       ng-model="loginInfoRevise.loginNickname"/>
+
             </div>
             <div class="email">
                 <div class="description">邮箱</div>
-                <div class="revise"><a href="javascript:">修改</a></div>
-                <div class="content">156161515@163.com</div>
+                <div ng-click="emailClicked=!emailClicked" class="revise">
+                    <button class="btn btn-primary">{{emailClicked?'提交':'修改'}}</button>
+                </div>
+                <div ng-show="!emailClicked" class="content">{{loginInfo.loginEmail}}</div>
+                <input class="content" title="" placeholder="输入新邮箱" ng-show="emailClicked"
+                       ng-model="loginInfoRevise.loginEmail"/>
             </div>
             <div class="password">
                 <div class="description">密码</div>
-                <div class="revise"><a href="javascript:">修改</a></div>
-                <div class="content"></div>
+                <div ng-click="passwordClicked=!passwordClicked" class="revise">
+                    <button class="btn btn-primary"
+                            ng-disabled="loginInfoRevise.loginPassword!=loginInfoRevise.loginPasswordCopy">
+                        {{passwordClicked?'提交':'修改'}}
+                    </button>
+                </div>
+                <div ng-show="!passwordClicked" class="content"></div>
+                <input type="password" class="content" title="" placeholder="再次输入新密码"
+                       ng-show="passwordClicked" ng-model="loginInfoRevise.loginPasswordCopy"/>
+                <input type="password" class="content" title="" placeholder="输入新密码" ng-show="passwordClicked"
+                       ng-model="loginInfoRevise.loginPassword"/>
             </div>
         </div>
     </div>
