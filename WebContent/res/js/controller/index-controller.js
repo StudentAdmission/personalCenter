@@ -27,7 +27,19 @@ app.controller('indexCtrl', ['$http', '$location', '$scope', 'validateService', 
             stdAccountMigration: 'true',
             stdIdPhone: 'certificate-photos.jpg'
         };
+        $scope.loginInfo={
+            loginNickname:'张三',
+            loginEmail:'123456@163.com'
+        };
         personalInfoService.setPersonalInfo($scope.personInfo);
+        validateService.setLoginInfo($scope.loginInfo);
+        $scope.logout=function () {
+            validateService.logout();
+            toastr.success('注销成功，2s后返回主页');
+            setTimeout(function () {
+                window.location.href = '/studentAdmission';
+            },2000);
+        };
         var permission = '0'; //validateService.validateIdentity();
         if (permission === -1) {
             alert('请先登录');
