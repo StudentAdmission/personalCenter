@@ -39,4 +39,10 @@ public class IndexController {
 		mv.setViewName("notice-box");
 		return mv;
 	}
+	@RequestMapping(value="/setting")
+	public ModelAndView setting(){
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("setting");
+		return mv;
+	}
 }
