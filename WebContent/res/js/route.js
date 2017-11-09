@@ -22,6 +22,11 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
             templateUrl: 'notice-box.html',
             controller: 'noticeBoxCtrl'
         })
+        //个人设置页面路由
+        .when('/setting', {
+            templateUrl: 'setting.html',
+            controller: 'settingCtrl'
+        })
         //其他情况路由
         .otherwise({
             redirectTo: '/'
