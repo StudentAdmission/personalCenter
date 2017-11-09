@@ -1,13 +1,24 @@
 @charset "UTF-8";
-.personal-photo{
+.setting-main .login-info .revise .btn {
+    outline: none;
+}
+.setting-main .login-info .revise .btn:focus{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.personal-photo {
     float: left;
     padding: 50px;
     background: white;
 }
-.personal-photo-img{
+
+.personal-photo-img {
     max-width: 200px;
     max-height: 200px;
 }
+
 .setting-main .login-info {
     margin-top: 50px;
 }
@@ -42,6 +53,7 @@
     float: right;
     font-size: 2rem;
 }
-.setting-main .revise a{
+
+.setting-main .revise a {
     text-decoration: none;
 }
