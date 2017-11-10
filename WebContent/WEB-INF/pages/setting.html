@@ -10,7 +10,7 @@
             <div class="nickname">
                 <div class="description">昵称</div>
                 <div ng-click="nicknameClicked=!nicknameClicked" class="revise">
-                    <button class="btn btn-primary">{{nicknameClicked?'提交':'修改'}}</button>
+                    <button class="btn btn-primary">{{nicknameClicked?'确定':'修改'}}</button>
                 </div>
                 <div ng-show="!nicknameClicked" class="content">{{loginInfo.loginNickname}}</div>
                 <input class="content" title="" placeholder="输入新昵称" ng-show="nicknameClicked"
@@ -20,7 +20,7 @@
             <div class="email">
                 <div class="description">邮箱</div>
                 <div ng-click="emailClicked=!emailClicked" class="revise">
-                    <button class="btn btn-primary">{{emailClicked?'提交':'修改'}}</button>
+                    <button class="btn btn-primary">{{emailClicked?'确定':'修改'}}</button>
                 </div>
                 <div ng-show="!emailClicked" class="content">{{loginInfo.loginEmail}}</div>
                 <input class="content" title="" placeholder="输入新邮箱" ng-show="emailClicked"
@@ -31,7 +31,7 @@
                 <div ng-click="passwordClicked=!passwordClicked" class="revise">
                     <button class="btn btn-primary"
                             ng-disabled="loginInfoRevise.loginPassword!=loginInfoRevise.loginPasswordCopy">
-                        {{passwordClicked?'提交':'修改'}}
+                        {{passwordClicked?'确定':'修改'}}
                     </button>
                 </div>
                 <div ng-show="!passwordClicked" class="content"></div>
