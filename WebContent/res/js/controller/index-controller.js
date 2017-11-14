@@ -40,7 +40,7 @@ app.controller('indexCtrl', ['$http', '$location', '$scope', 'validateService', 
                 window.location.href = '/studentAdmission';
             }, 2000);
         };
-        var permission = '0'; //validateService.validateIdentity();
+        var permission = validateService.validateIdentity();
         if (permission === -1) {
             alert('请先登录');
             window.location.href = '/studentAdmission';
