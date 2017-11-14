@@ -36,9 +36,9 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
             controller: 'noticeCtrl'
         })
         //发布问卷页面路由
-        .when('survey', {
+        .when('/survey', {
             templateUrl: 'survey.html',
-            controller: 'noticeCtrl'
+            controller: 'surveyCtrl'
         })
         //其他情况路由
         .otherwise({
