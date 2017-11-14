@@ -2,8 +2,11 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('');
     $routeProvider
-    //学生页面路由
         .when('/', {
+            templateUrl: 'main.html'
+        })
+        //学生页面路由
+        .when('/personalInfo', {
             templateUrl: 'information.html',
             controller: 'informationCtrl'
         })
@@ -26,6 +29,16 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         .when('/setting', {
             templateUrl: 'setting.html',
             controller: 'settingCtrl'
+        })
+        //通知管理页面路由
+        .when('/notice', {
+            templateUrl: 'notice.html',
+            controller: 'noticeCtrl'
+        })
+        //发布问卷页面路由
+        .when('survey', {
+            templateUrl: 'survey.html',
+            controller: 'noticeCtrl'
         })
         //其他情况路由
         .otherwise({
