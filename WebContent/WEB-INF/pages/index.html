@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="res/css/dormitory.css">
     <link rel="stylesheet" href="res/css/notice-box.css">
     <link rel="stylesheet" href="res/css/setting.css">
+    <link rel="stylesheet" href="res/css/notice.css">
+    <link rel="stylesheet" href="res/css/survey.css">
 
     <!--favicon-->
     <link rel="icon" href="res/img/favicon.ico">
@@ -34,7 +36,7 @@
         <div class="col-sm-3 col-sm-offset-6 sa-col personal-info">
             <div id="avatar" class="sa-new-notice">
                 <img src="res/img/avatar.jpg" class="sa-avatar" alt="">
-                <div class="personal-info-dialogue vin-detail">
+                <div ng-show="identity=='student'" class="personal-info-dialogue vin-detail">
                     <ul>
                         <li><a href="personalInfo">个人信息</a></li>
                         <li><a href="noticeBox" class="sa-new-notice-inside">消息盒子</a></li>
@@ -49,11 +51,14 @@
         <div id="asideMenu" class="col-sm-2 sa-col sa-aside-menu">
             <ul>
                 <li ng-show="identity=='student'"><a href="personalInfo">个人信息</a></li>
+                <li ng-show="identity=='master'"><a href="notice">通知管理</a></li>
+                <li ng-show="identity=='master'"><a href="survey">发布问卷</a></li>
                 <li ng-show="identity=='student'"><a href="class">班级信息</a></li>
                 <li ng-show="identity=='student'"><a href="dormitory">宿舍信息</a></li>
                 <li ng-show="identity=='student'" class="notice-box"><a href="noticeBox">消息盒子</a></li>
                 <li ng-show="identity!=''"><a href="setting">个人设置</a></li>
                 <li ng-show="identity!=''"><a href="/studentAdmission">返回首页</a></li>
+                <li ng-show="identity!=''" ng-click="logout();"><a href="javascript:">退出登录</a></li>
             </ul>
         </div>
         <div class="col-sm-10 sa-col sa-content">
@@ -93,6 +98,8 @@
 <script src="res/js/controller/dormitory-controller.js"></script>
 <script src="res/js/controller/notice-box-controller.js"></script>
 <script src="res/js/controller/setting-controller.js"></script>
+<script src="res/js/controller/notice-controller.js"></script>
+<script src="res/js/controller/survey-controller.js"></script>
 
 </body>
 </html>
