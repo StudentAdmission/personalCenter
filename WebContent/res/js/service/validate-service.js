@@ -6,10 +6,10 @@ app.service('validateService', ['$http', function ($http) {
     this.setLoginSessionTag = function (tag) {
         localStorage.saTag = tag;
     };
-    this.setLoginInfo=function (login) {
-        loginInfo=login;
+    this.setLoginInfo = function (login) {
+        loginInfo = login;
     };
-    this.getLoginInfo=function () {
+    this.getLoginInfo = function () {
         return loginInfo;
     };
     this.getLoginSessionTag = function () {
@@ -17,6 +17,12 @@ app.service('validateService', ['$http', function ($http) {
     };
     this.getLoginSession = function () {
         return localStorage.saLogin;
+    };
+    this.getLoginSessionNickname = function () {
+        return localStorage.saNickname;
+    };
+    this.getLoginSessionPortrait = function () {
+        return localStorage.saPortrait;
     };
 
     this.validateIdentity = function () {
