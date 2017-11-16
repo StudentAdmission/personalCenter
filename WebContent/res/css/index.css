@@ -225,3 +225,11 @@ ul {
     display: none;
     cursor: pointer;
 }
+
+
+.connect-error {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: red;
+}
