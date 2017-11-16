@@ -1,9 +1,20 @@
 <div class="setting-main">
     <div class="row sa-row">
         <div class="personal-photo">
-            <img class="personal-photo-img" src="" alt="">
+            <img ng-hide="avatarData.avatarFile" class="personal-photo-img" src="" alt="">
+            <img ngf-src="avatarData.avatarFile"
+                 class="img-responsive personal-photo-img"/>
         </div>
-        <div class="sa-student-name">{{loginInfo.loginNickname}}</div>
+        <div class="sa-student-name">
+            <div class="btn btn-primary" ngf-select
+                 ngf-pattern="'image/*'"
+                 ngf-multiple="false"
+                 ng-model="avatarData.avatarFile">选择头像
+            </div>
+            <div class="btn btn-primary" ng-click="avatarData.avatarFile=null">重置头像</div>
+
+        </div>
+
     </div>
     <div class="row sa-row">
         <div class="login-info">
@@ -40,6 +51,7 @@
                 <input type="password" class="content" title="" placeholder="输入新密码" ng-show="passwordClicked"
                        ng-model="loginInfoRevise.loginPassword"/>
             </div>
+            <button class="btn btn-primary setting-submit" ng-click="settingSubmit();">提交</button>
         </div>
     </div>
 </div>
