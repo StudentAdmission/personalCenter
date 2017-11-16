@@ -1,6 +1,6 @@
 <div class="row sa-row">
     <div class="certificate-photo">
-        <img class="certificate-photo-img" src="" alt="">
+        <img class="certificate-photo-img" src="res/img/certificate-photos.jpg" alt="证件照">
     </div>
     <div class="sa-student-name">{{studentInfo.stdName}}</div>
 </div>
@@ -45,7 +45,7 @@
             </div>
             <div class="detail-item">
                 <div class="information-title">行政班</div>
-                <div class="information-content">{{studentInfo.stdClasssNum}}</div>
+                <div class="information-content">{{studentInfo.stdClassNum}}</div>
             </div>
             <div class="detail-item">
                 <div class="information-title">宿舍号</div>
@@ -57,7 +57,7 @@
             </div>
             <div class="detail-item">
                 <div class="information-title">学历</div>
-                <div class="information-content">缺</div>
+                <div class="information-content">{{studentInfo.stdEducation}}</div>
             </div>
             <div class="detail-item">
                 <div class="information-title">父亲姓名</div>
@@ -85,16 +85,16 @@
                 <div class="information-content family-address">{{studentInfo.stdAddress}}</div>
             </div>
             <div class="detail-item">
-                <div class="information-title">缺</div>
-                <div class="information-content">缺</div>
+                <div class="information-title">邮政编码</div>
+                <div class="information-content">{{studentInfo.stdPostCode}}</div>
             </div>
             <div class="detail-item">
                 <div class="information-title">准考证号</div>
-                <div class="information-content">缺</div>
+                <div class="information-content">{{studentInfo.stdTicketNumber}}</div>
             </div>
             <div class="detail-item">
                 <div class="information-title">生源地</div>
-                <div class="information-content">缺</div>
+                <div class="information-content">{{studentInfo.stdSourceOfHealth}}</div>
             </div>
             <div class="detail-item">
                 <div class="information-title">迁移户口</div>
