@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>BISTU——学生管理系统</title>
+    <title>BISTU——新生入学管理系统</title>
     <!--common CSS-->
     <link rel="stylesheet" href="res/css/common/bootstrap.min.css">
     <link rel="stylesheet" href="res/css/common/font-awesome.min.css">
@@ -35,7 +35,7 @@
         </div>
         <div class="col-sm-3 col-sm-offset-6 sa-col personal-info">
             <div id="avatar" class="sa-new-notice">
-                <img src="res/img/avatar.jpg" class="sa-avatar" alt="">
+                <img src="" class="sa-avatar" alt="">
                 <div ng-show="identity=='student'" class="personal-info-dialogue vin-detail">
                     <ul>
                         <li><a href="personalInfo">个人信息</a></li>
@@ -78,19 +78,23 @@
 <script src="res/js/common/jquery-3.2.1.min.js"></script>
 <script src="res/js/vin-showdetail.js"></script>
 <script src="res/js/common/angular.min.js"></script>
+<script src="res/js/common/ng-file-upload.min.js"></script>
+<script src="res/js/common/ng-file-upload-shim.min.js"></script>
 <script src="res/js/common/angular-route.min.js"></script>
 <script src="res/js/common/bootstrap.min.js"></script>
 <script src="res/js/common/toastr.min.js"></script>
 <script src="res/js/common/tipso.min.js"></script>
+<script src="res/js/common/md5.min.js"></script>
 <!--高德地图api-->
 <script src="http://webapi.amap.com/maps?v=1.4.0&key=86d7e9b2838a66942d8e3665a5049028"></script>
 
+
+<script src="res/js/config.js"></script>
 
 <script src="res/js/app.js"></script>
 <script src="res/js/route.js"></script>
 
 <script src="res/js/service/validate-service.js"></script>
-<script src="res/js/service/personal-information-service.js"></script>
 
 <script src="res/js/controller/index-controller.js"></script>
 <script src="res/js/controller/information-controller.js"></script>
