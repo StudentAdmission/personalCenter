@@ -2,7 +2,8 @@
 .setting-main .login-info .revise .btn {
     outline: none;
 }
-.setting-main .login-info .revise .btn:focus{
+
+.setting-main .login-info .revise .btn:focus {
     color: #fff;
     background-color: #337ab7;
     border-color: #2e6da4;
@@ -56,4 +57,9 @@
 
 .setting-main .revise a {
     text-decoration: none;
+}
+
+.setting-submit {
+    float: right;
+    margin-right: 50px;
 }
