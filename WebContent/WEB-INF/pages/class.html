@@ -1,6 +1,6 @@
 <div class="row sa-row class-main">
     <div class="col-sm-4 sa-col">
-        <div class="class-info">{{personalInfo.stdCollege}} - {{personalInfo.stdMajor}} - {{personalInfo.stdClasssNum}}
+        <div class="class-info">{{personalInfo.stdCollege}} - {{personalInfo.stdMajor}} - {{personalInfo.stdClassNum}}
         </div>
         <div class="instructor-info">
             <div class="row sa-row">
@@ -11,10 +11,10 @@
                 </div>
                 <div class="col-sm-8 sa-col">
                     <div class="instructor-info-content">
-                        <div class="instructor-name">王二</div>
-                        <div class="instructor-phone">12548778542</div>
-                        <div class="instructor-location">二教-207</div>
-                        <div class="instructor-email">15245632@163.com</div>
+                        <div class="instructor-name">{{instructor.itrName}}</div>
+                        <div class="instructor-phone">{{instructor.itrTele}}</div>
+                        <div class="instructor-location">{{instructor.itrLocation}}</div>
+                        <div class="instructor-email">{{instructor.itrEmail}}</div>
                     </div>
                 </div>
             </div>
@@ -28,10 +28,10 @@
                 </div>
                 <div class="col-sm-8 sa-col">
                     <div class="master-info-content">
-                        <div class="master-name">王二</div>
-                        <div class="master-phone">12548778542</div>
-                        <div class="master-location">二教-207</div>
-                        <div class="master-email">15245632@163.com</div>
+                        <div class="master-name">{{classmaster.masterName}}</div>
+                        <div class="master-phone">{{classmaster.masterTele}}</div>
+                        <div class="master-location">{{classmaster.masterLocation}}</div>
+                        <div class="master-email">{{classmaster.masterEmail}}</div>
                     </div>
                 </div>
             </div>
@@ -49,79 +49,14 @@
                     <th>性别</th>
                     <th>学号</th>
                     <th>联系方式</th>
-                    <th>备注</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
+                <tr ng-repeat="item in classmate">
+                    <td>{{item.stdName}}</td>
+                    <td>{{item.stdGender}}</td>
+                    <td>{{item.stdNum}}</td>
+                    <td>{{item.stdTele}}</td>
                 </tr>
                 </tbody>
             </table>
