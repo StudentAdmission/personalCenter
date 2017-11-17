@@ -35,6 +35,11 @@ app.controller('indexCtrl', ['$http', '$location', '$scope', 'validateService',
                     window.location.href = '/studentAdmission';
                 }
 
+                $http.post('/studentAdmission/hasUnread.do', "'" + validateService.getLoginSession() + "'")
+                    .then(function (response) {
+                        $scope.hasUnreadNotice = response.data.status === 1;
+                    });
+
                 $(function () {
                     function goTop() {
                         $("html,body").animate({scrollTop: 0}, 500);
@@ -51,7 +56,10 @@ app.controller('indexCtrl', ['$http', '$location', '$scope', 'validateService',
                             $(this).addClass('active');
                         });
                     });
-                    $('.sa-new-notice').showDetail();
+                    $('.sa-new-notice').showDetail({
+                        showSpeed: 1000,
+                        hideSpeed: 1000
+                    });
                     $(window).on('scroll', function () {
                         var bodyHeight = $('.sa-content').height();
                         var windowHeight = $(window).height();
