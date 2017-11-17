@@ -64,8 +64,25 @@
 .opened .closed-block {
     transform: rotate(90deg);
 }
-.notice-detail{
+
+.notice-detail {
     float: left;
     width: 100%;
     display: none;
+    font-size: 1.7rem;
+    line-height: 2em;
+}
+
+.notice-detail-publisher {
+    display: inline-block;
+    margin: 0 2em;
+}
+
+.notice-detail-time {
+    display: inline-block;
+}
+
+.notice-detail-content {
+    text-indent: 2em;
+    padding-bottom: 2em;
 }
