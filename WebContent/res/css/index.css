@@ -233,3 +233,7 @@ ul {
     font-weight: bold;
     color: red;
 }
+
+.message-error {
+    border: 2px inset rgba(255, 0, 0, .8);
+}
