@@ -1,0 +1,118 @@
+<div class="row sa-row">
+    <div class="col-sm-12 sa-col">
+        <div class="notice-main">
+            <div class="row sa-row">
+                <div class="notice-publish"
+                     ng-click="changeView('publish')"
+                     ng-class="publishClicked?'active':''">
+                    <div class="title">
+                        发布通知
+                    </div>
+                </div>
+                <div class="notice-feedback"
+                     ng-click="changeView('feedback');getFeedback();"
+                     ng-class="feedbackClicked?'active':''">
+                    <div class="title">
+                        通知反馈
+                    </div>
+                </div>
+            </div>
+            <div class="notice-content">
+                <div ng-show="publishClicked" class="notice-publish-content">
+                    <div class="content-row">
+                        <label class="publish-title-label" for="publish-title">标题：</label>
+                        <input ng-model="noticePublish.noticeTitle" id="publish-title" class="publish-title"></div>
+                    <div class="content-row">
+                        <label class="publish-content-label" for="publish-content">内容：</label>
+                        <textarea ng-model="noticePublish.noticeContent" rows='15' id="publish-content"
+                                  class="publish-content"></textarea>
+                    </div>
+                    <!--<div class="content-row">
+                        <label class="publish-file-label" for="publish-file">附件：
+                            <i class="btn btn-primary publish-file">选择上传文件</i>
+                        </label>
+                        <input type="file" ng-hide="true" id="publish-file"/>
+                    </div>-->
+                    <div class="content-row">
+                        <button ng-click="noticeSubmit();" class="btn btn-primary btn-submit">提交</button>
+                    </div>
+                </div>
+                <div ng-show="feedbackClicked" class="notice-feedback-content">
+                    <div class="content-row">
+                        <div class="notice-item unread"
+                             ng-class="'notice'+item.noticeId"
+                             ng-click="toggleNoticeFeedback('notice'+item.noticeId);"
+                             ng-repeat="item in noticeFeedback">
+                            <div class="notice-title">
+                                {{item.noticeTitle}}
+                            </div>
+                            <div class="notice-label">
+                                {{item.noticeReadNumber}}/{{item.noticePushTheNumber}}
+                            </div>
+                            <div class="notice-condition">
+                                展开
+                                <div class="closed-block">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="notice-detail">
+                                <div class="notice-detail-time">
+                                    2017-11-08
+                                </div>
+                                <hr>
+                                <div class="notice-detail-content">
+                                    {{item.noticeContent}}
+                                </div>
+                                <hr>
+                                <div class="row sa-row">
+                                    <div class="col-sm-6">
+                                        <div>已读名单</div>
+                                        <div class="notice-read-list">
+                                            <table class="table table-bordered table-hover table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>姓名</th>
+                                                    <th>班级</th>
+                                                    <th>学号</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr  ng-repeat="item in item.noticeFeedbackReadList">
+                                                    <td>{{item.stdName}}</td>
+                                                    <td>{{item.stdClass}}</td>
+                                                    <td>{{item.stdNum}}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div>未读名单</div>
+                                        <div class="notice-unread-list">
+                                            <table class="table table-bordered table-hover table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>姓名</th>
+                                                    <th>班级</th>
+                                                    <th>学号</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr  ng-repeat="item in item.noticeFeedbackUnReadList">
+                                                    <td>{{item.stdName}}</td>
+                                                    <td>{{item.stdClass}}</td>
+                                                    <td>{{item.stdNum}}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
