@@ -1,9 +1,12 @@
 <div class="row sa-row">
     <div class="notice-box-main">
         <div class="notice-box-content">
-            <div class="notice-box-item unread">
+            <div class="notice-box-item"
+                 ng-repeat="item in noticeBox"
+                 ng-class="item.readTag?'notice'+item.noticeId:'unread notice'+item.noticeId"
+                 ng-click="toggleNotice('notice'+item.noticeId);setReadTag(item.noticeId)">
                 <div class="notice-title">
-                    2018年推荐免试攻读硕士学位研究生公示
+                    {{item.noticeTitle}}
                 </div>
                 <div class="notice-condition">
                     展开
@@ -12,63 +15,15 @@
                     </div>
                 </div>
                 <div class="notice-detail">
-                    <div class="notice-detail-title">
-                        2018年推荐免试攻读硕士学位研究生公示
-                    </div>
                     <div class="notice-detail-publisher">
-                        辅导员
+                        {{item.noticeAnnouncerName}}
                     </div>
                     <div class="notice-detail-time">
                         2017-11-08
                     </div>
                     <hr>
                     <div class="notice-detail-content">
-                        北京信息科技大学
-                        2018年推荐免试攻读硕士学位研究生公示
-                        2017年9月22日学校召开了2018年推荐优秀应届本科毕业生免试攻读硕士学位研究生遴选工作领导小组会议（以下简称校推免生遴选工作领导小组）。校推免生遴选工作领导小组对各学院上报的候选人材料进行了审核，在充分评议的基础上经无记名投票表决，确定我校2018年推荐免试攻读硕士学位研究生30人。
-                        为了保证推荐结果的公平、公正，现将名单进行公示（名单见附件），公示期内受理相关申诉与举报事宜。
-                        公示时间：2017年9月22日～25日。
-                        接访地点及电话：
-                        小营校区教一楼105室，电话：82426824；
-                        小营校区三号办公楼127室，电话：82426829；
-                        小营校区三号办公楼146室，电话：82426853；
-                        小营校区三号办公楼247室，电话：82426866。
-                        举报邮箱：jiaowuchu@bistu.edu.cn
-                        xueshengchu@bistu.edu.cn
-                        jwbgs@bistu.edu.cn
-                    </div>
-                </div>
-            </div>
-            <div class="notice-box-item unread">
-                <div class="notice-title">
-                    通知消息1
-                </div>
-                <div class="notice-condition">
-                    展开
-                    <div class="closed-block">
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="notice-box-item unread">
-                <div class="notice-title">
-                    通知消息1
-                </div>
-                <div class="notice-condition">
-                    展开
-                    <div class="closed-block">
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="notice-box-item">
-                <div class="notice-title">
-                    通知消息1
-                </div>
-                <div class="notice-condition opened">
-                    展开
-                    <div class="closed-block">
-                        <div></div>
+                        {{item.noticeContent}}
                     </div>
                 </div>
             </div>
