@@ -34,12 +34,13 @@
             <img src="res/img/logo.png" alt="">
         </div>
         <div class="col-sm-3 col-sm-offset-6 sa-col personal-info">
-            <div id="avatar" class="sa-new-notice">
+            <div id="avatar" ng-class="hasUnreadNotice?'sa-new-notice':''">
                 <img src="" class="sa-avatar" alt="">
                 <div ng-show="identity=='student'" class="personal-info-dialogue vin-detail">
                     <ul>
                         <li><a href="personalInfo">个人信息</a></li>
-                        <li><a href="noticeBox" class="sa-new-notice-inside">消息盒子</a></li>
+                        <li><a href="noticeBox"
+                               ng-class="hasUnreadNotice?'sa-new-notice-inside':''">消息盒子</a></li>
                         <li ng-click="logout()"><a href="javascript:">退出登录</a></li>
                     </ul>
                 </div>
@@ -55,7 +56,10 @@
                 <li ng-show="identity=='master'"><a href="survey">发布问卷</a></li>
                 <li ng-show="identity=='student'"><a href="class">班级信息</a></li>
                 <li ng-show="identity=='student'"><a href="dormitory">宿舍信息</a></li>
-                <li ng-show="identity=='student'" class="notice-box"><a href="noticeBox">消息盒子</a></li>
+                <li ng-show="identity=='student'"
+                    ng-class="hasUnreadNotice?'notice-box':''">
+                    <a href="noticeBox">消息盒子</a>
+                </li>
                 <li ng-show="identity!=''"><a href="setting">个人设置</a></li>
                 <li ng-show="identity!=''"><a href="/studentAdmission">返回首页</a></li>
                 <li ng-show="identity!=''" ng-click="logout();"><a href="javascript:">退出登录</a></li>
