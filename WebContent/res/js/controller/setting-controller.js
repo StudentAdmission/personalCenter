@@ -35,14 +35,17 @@ app.controller('settingCtrl', ['$http', '$scope', 'validateService', 'Upload', f
             Upload.upload({
                 url: url,
                 data: $scope.avatarData
+            }).success(function (data) {
+                console.log(data);
+                $('.personal-photo-img').attr('src', AVATAR_PATH + data.message);
             })
+
             var date = new Date();
             var year = date.getFullYear();
             var month = date.getMonth() + 1;
             var day = date.getDate();
             avatar = validateService.getLoginSession() + '_' + year + month + day + '.jpg';
         }
-
         $scope.loginInfoRevise.loginNickname = $scope.loginInfoRevise.loginNickname ? $scope.loginInfoRevise.loginNickname : $scope.loginInfo.loginNickname;
         $scope.loginInfoRevise.loginEmail = $scope.loginInfoRevise.loginEmail ? $scope.loginInfoRevise.loginEmail : $scope.loginInfo.loginEmail;
         if ($scope.loginInfoRevise.loginPassword || $scope.loginInfoRevise.loginPasswordCopy) {
@@ -57,7 +60,6 @@ app.controller('settingCtrl', ['$http', '$scope', 'validateService', 'Upload', f
         }
         $scope.loginInfoRevise.loginNum = validateService.getLoginSession();
         $scope.loginInfoRevise.loginPortrait = avatar;
-        console.log($scope.loginInfoRevise);
         $http.post('/studentAdmission/revisePwd.do', $scope.loginInfoRevise).then(function (response) {
             if (response.data === 1) {
                 toastr.remove();
