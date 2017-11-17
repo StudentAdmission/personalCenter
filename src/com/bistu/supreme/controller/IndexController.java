@@ -13,6 +13,12 @@ public class IndexController {
 		mv.setViewName("index");
 		return mv;
 	}
+	@RequestMapping(value="/main")
+	public ModelAndView main(){
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("main");
+		return mv;
+	}
 	
 	@RequestMapping(value="/information")
 	public ModelAndView information(){
@@ -43,6 +49,18 @@ public class IndexController {
 	public ModelAndView setting(){
 		ModelAndView mv=new ModelAndView();
 		mv.setViewName("setting");
+		return mv;
+	}
+	@RequestMapping(value="/notice")
+	public ModelAndView notice(){
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("notice");
+		return mv;
+	}
+	@RequestMapping(value="/survey")
+	public ModelAndView survey(){
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("survey");
 		return mv;
 	}
 }
